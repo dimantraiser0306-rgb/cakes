@@ -1,0 +1,43 @@
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body{
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+    flex-grow: 1;
+    overflow-x: hidden;
+
+}
+img, video, picture{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+li{
+    color: var(--text-color);
+    font-size: 18px;
+    letter-spacing: 1.5;
+}
+input{
+    border: none;
+    height: fit-content;
+    font-size: 20px;
+        &:focus{
+            outline: none;
+            text-align: center;
+                &::placeholder{
+                    color: transparent;
+                }
+        }
+}

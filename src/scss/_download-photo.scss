@@ -1,0 +1,48 @@
+.download__photo{
+    margin: 0 auto;
+    background-image: url('/src/assets/holdsPhone.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh; 
+    padding: clamp(50px, 20svw, 300px) 0;
+
+}
+
+.download__photo-wrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 84px;
+    height: 100%;
+}
+
+.download__photo .container{
+    height: 100%;
+}
+
+.download__photo-right--part{
+    display: flex;
+    justify-content: center;   
+    flex-direction: column;
+    gap: 24px;
+    max-width: 481px;
+        .instruction__text{
+            font-size: 21px;
+            font-weight: 400;
+            line-height: 1.4;
+            letter-spacing: -0.2px;
+            color: var(--main-text-color);
+        }
+
+}
+
+@media(max-width: 800px){
+    .download__photo-wrap{
+        display: flex;
+        justify-content: center;
+    }
+    .download__photo-left--empty--part{
+        display: none;
+    }
+}

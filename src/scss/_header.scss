@@ -1,0 +1,188 @@
+.header{
+    position: relative;
+    background-image: url('/src/assets/hero.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    width: 100%;
+
+    padding-bottom: clamp(30px, 13svh, 200px);
+}
+
+.header__top{
+    position: absolute;
+    left:0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 37px 10px 31px;
+}
+
+.adress{
+    display: flex;
+    gap: 14px;
+    font-size: 12px;
+    line-height: 1.5;
+    max-width:151px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.number{
+    display: flex;
+    align-items: flex-start;
+    max-width: 231px;
+    width: 100%;
+    gap: 15px;
+        img{
+            width: 19px;
+            padding-top: 6px;
+        }
+}
+
+.phoneNumber{
+    font-size: 20px;
+    line-height: 1.52;
+    text-wrap: nowrap;
+    width: fit-content;
+}
+.work__info{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.header__top-right{
+    display: flex;
+    gap: 88px;
+    align-items: center;
+}
+.header__wrap{
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: clamp(130px, 15svw, 250px);
+}
+
+.header__main{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: var(--main-text-color);
+    max-width: 647px;
+    width: 100%;
+}
+
+.description{
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 10px 18px;
+    background-color: var(--gray-color);
+    color: var(--text-color);
+    width: fit-content;
+    border-radius: 5px;
+}
+.under__main-title--text{
+    font-size: 24px !important;
+    max-width: 544px;
+    margin-bottom: 16px;
+}
+
+
+.btn__block{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+        p{
+            max-width: 210px;
+        };
+}
+
+.whoIsItFor{
+    position: absolute;
+    width: fit-content;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 0;
+    color: var(--text-color);
+    font-size: 48px;
+    font-weight: 500;
+    max-width: 1180px;
+    width: 100%;
+    text-align: center;
+}
+
+// бургер кнопка и всплывающее окно
+
+.burger__btn{
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 30px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    position: absolute;
+    z-index: 40;
+        span{
+            background-color: aqua;
+            width: 100%;
+            height: 1px;
+        }
+}
+
+@media(max-width: 800px){
+    .header__main{
+    gap: 24px;
+    max-width: 347px;
+    }
+    .header__wrap{
+        padding-top: 60px;
+    }
+
+    .under__main-title--text{
+        font-size: 18px !important ;
+        margin-bottom: 10px;
+    }
+    .burger__btn{
+        visibility: visible;
+        margin: 20px;
+    }
+    .header__top{
+        // visibility: hidden;
+        display: flex;
+        align-items:flex-start;
+        flex-direction: column;
+        max-width: fit-content;
+        background-color: rgba(9, 47, 77, 0.6);
+        padding-top: 60px;
+        top: 0;
+        left: 0;
+        z-index: 4;
+        height: 100vh;
+        backdrop-filter: blur(10px);
+        transform: translateX(-100%);
+        transition: transform 1s ease-in-out;
+    }
+    .header__top-right{
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        gap: 0
+    }
+    
+}
+
+// свойство чтобы блок выдвигался слева
+
+.move{
+    transform: translateX(0);
+}
+
+.background__shadow-toggle{
+    background: rgba(0, 0, 0, .8);
+ }
+ 
