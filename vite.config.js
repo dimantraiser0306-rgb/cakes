@@ -1,9 +1,13 @@
 import { defineConfig } from "vite";
-import path from "path";
 
 export default defineConfig({
-    base: "Cakes",
+    // Базовый путь должен быть маленькими буквами и со слэшами по бокам
+    base: "/cakes/",
+
     build: {
+        // Указываем Vite собирать проект в папку docs вместо dist
         outDir: "docs",
+        // Очищать папку docs перед каждой новой сборкой
+        emptyOutDir: true,
     },
 });
